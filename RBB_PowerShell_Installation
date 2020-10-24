@@ -1,0 +1,7 @@
+snap install powershell --classic
+sudo apt install openssh-client
+sudo apt install openssh-server
+sudo vi /etc/ssh/sshd_config
+     Make passwordauthentication is enabled
+	 Make PubkeyAuthentication yes
+sudo service sshd restart
