@@ -1,0 +1,18 @@
+Select outletcode,outletname,address,blank='',month='10',status='1',created='2',deleted='0',year='2020' from apOutlet
+Where clientID=25 ANd deleted=0 And clientoutletcode In (
+
+Select * from MobiUser
+Where clientID=25 And deleted=0 And position='Beauty Advisor'
+Order by positioncode
+
+
+Select * from apEmployee
+Where clientID=25 And deleted=0 
+
+Select * from apposition
+Where clientID=25 And deleted=0 
+Order by positioncode
+
+Select Max(userid) From mobiuser
+Select Max(employeeiD) From apEmployee
+Select Max(positionID) From apPosition
